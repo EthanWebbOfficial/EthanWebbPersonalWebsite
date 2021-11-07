@@ -1,0 +1,86 @@
+baseurl: https://blist.vercel.app
+metaDataFormat: yaml
+title: Blist Multilingual Theme
+theme: blist-hugo-theme
+DefaultContentLanguage: en
+DefaultContentLanguageInSubdir: yes
+languages:
+  de:
+    contentDir: content/de
+    description: Modernes Blog-Theme für Ihre Hugo-Site.
+    languageName: Deutsch
+    menu:
+      main:
+        - name: Blog
+          url: blog
+          weight: 1
+        - name: Über mich
+          url: page/about/
+          weight: 2
+        - name: Tags
+          url: tags
+          weight: 3
+    params:
+      introPhoto: /picture.jpg
+      introSubtitle: 26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen,
+        Bloggen und Malen hat
+      introTitle: Hallo, ich bin Katheryn Fox
+    title: Blist (mehrsprachig)
+    weight: 2
+  dy:
+    contentDir: content/dy
+    languageName: Test Language
+    weight: 3
+  en:
+    contentDir: content/en
+    languageName: English
+    menu:
+      main:
+        - name: Blog
+          url: blog
+          weight: 1
+        - name: About
+          url: page/about/
+          weight: 2
+        - name: Tags
+          url: tags
+          weight: 3
+    params:
+      introPhoto: /picture.jpg
+      introSubtitle: 26 y/o junior developer who enjoys social card games, blogging
+        and painting
+      introTitle: Hey! I'm Katheryn Fox
+    weight: 1
+params:
+  ascentColor: bg-blue-100
+  copyright: Copyright © 2021 - Katheryn Fox · All rights reserved
+  darkModeToggle: yes
+  enableSearch: yes
+  favicon: /favicon.svg
+  homepage:
+    social:
+      description: I work on everything coding and tweet developer memes
+      dribbble: https://dribbble.com/
+      github: https://github.com/
+      linkedin: https://linkedin.com/in/
+      medium: https://medium.com/
+      reddit: https://reddit.com/
+      title: Follow me
+      twitter: https://twitter.com/
+menu:
+  main:
+    - name: About
+      url: /about
+build:
+  writeStats: yes
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+markup:
+  goldmark:
+    renderer:
+      unsafe: yes
+  highlight:
+    style: dracula
