@@ -1,6 +1,6 @@
 baseurl: https://ethanwebbportfolio.netlify.app/
 metaDataFormat: yaml
-title: Blist Multilingual Theme
+title: Ethan Webb Portfolio
 theme: blist-hugo-theme
 DefaultContentLanguage: en
 DefaultContentLanguageInSubdir: yes
