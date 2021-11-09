@@ -21,7 +21,7 @@ languages:
           url: tags
           weight: 3
     params:
-      introPhoto: /picture.jpg
+      introPhoto: /ethan.jpg
       introSubtitle: 26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen,
         Bloggen und Malen hat
       introTitle: Hallo, ich bin Katheryn Fox
@@ -46,7 +46,7 @@ languages:
           url: tags
           weight: 3
     params:
-      introPhoto: /picture.jpg
+      introPhoto: /ethan.jpg
       introSubtitle: 21 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make positive change.
       introTitle: Hello, I'm Ethan Webb!
     weight: 1
