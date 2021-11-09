@@ -49,11 +49,11 @@ languages:
       introPhoto: /picture.jpg
       introSubtitle: 26 y/o junior developer who enjoys social card games, blogging
         and painting
-      introTitle: Hey! I'm Katheryn Fox
+      introTitle: Hello, I'm Ethan Webb!
     weight: 1
 params:
   ascentColor: bg-blue-100
-  copyright: Copyright © 2021 - Katheryn Fox · All rights reserved
+  copyright: Copyright © 2021 - Ethan Webb· All rights reserved
   darkModeToggle: yes
   enableSearch: yes
   favicon: /favicon.svg
