@@ -47,8 +47,7 @@ languages:
           weight: 3
     params:
       introPhoto: /picture.jpg
-      introSubtitle: 26 y/o junior developer who enjoys social card games, blogging
-        and painting
+      introSubtitle: 21 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make positive change.
       introTitle: Hello, I'm Ethan Webb!
     weight: 1
 params:
