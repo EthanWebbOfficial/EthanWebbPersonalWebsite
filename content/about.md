@@ -1,7 +1,7 @@
 ---
-author: Katheryn Fox
+author: Ethan Webb
 title: About Me
-date: 2021-07-15
+date: 2021-11-12
 description:
 keywords: ["about-us", "about-hugo", "contact"]
 type: about
