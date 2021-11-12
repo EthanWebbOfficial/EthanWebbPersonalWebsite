@@ -5,10 +5,6 @@ theme: blist-hugo-theme
 DefaultContentLanguage: en
 DefaultContentLanguageInSubdir: yes
 languages:
-  dy:
-    contentDir: content/dy
-    languageName: Test Language
-    weight: 3
   en:
     contentDir: content/en
     languageName: English
