@@ -1,29 +1,20 @@
 ---
-author: Katheryn Fox
-date: "2021-07-15"
-description: null
+author: Ethan Webb
+date: "2021-11-12"
+description: Introduction To Ethan.
 keywords:
-- about-us
-- about-hugo
+- about-me
 - contact
 title: About Me
 type: about
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hello, I'm Ethan and I am an MSc Statistics student at Lancaster University, United Kingdom. 
 
-Hugo makes use of a variety of open source projects including:
+I graduated from Lancaster University with a First Class BSc in Mathematics in 2021 and I decided to stay at the University to pursue a masters degree. I have a keen interest in using Statistics and Data Analytics to make a positive change in the world and I enjoy the challenge of using my statistical analysis skills to tackle real world problems.
 
-- https://github.com/yuin/goldmark
-- https://github.com/alecthomas/chroma
-- https://github.com/muesli/smartcrop
-- https://github.com/spf13/cobra
-- https://github.com/spf13/viper
+I have worked on a number of projects at University, with my favourite being for the Lancaster University Mock Investment Fund - the 'Ghosal Fund'. In my role as a Quantitative Analyst, my team and I built an Automated Value At Risk system in Python measuring and forecasting portfolio volatility. We used a GARCH time series model to forecast the stock variance.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+My hope is that I can use this website to showcase my project work, both within my degree and outside my studies, so that I can continue to learn and apply my skills as I did in this previous project.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Outside of my studies, I am interested in sports and I am a loyal fan to both Birmingham City Football Club, and the Los Angeles Rams. I also enjoy reading about and studying business and psychology. 
