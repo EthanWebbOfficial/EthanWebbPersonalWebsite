@@ -5,28 +5,6 @@ theme: blist-hugo-theme
 DefaultContentLanguage: en
 DefaultContentLanguageInSubdir: yes
 languages:
-  de:
-    contentDir: content/de
-    description: Modernes Blog-Theme für Ihre Hugo-Site.
-    languageName: Deutsch
-    menu:
-      main:
-        - name: Blog
-          url: blog
-          weight: 1
-        - name: Über mich
-          url: page/about/
-          weight: 2
-        - name: Tags
-          url: tags
-          weight: 3
-    params:
-      introPhoto: /ethan.jpg
-      introSubtitle: 26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen,
-        Bloggen und Malen hat
-      introTitle: Hallo, ich bin Katheryn Fox
-    title: Blist (mehrsprachig)
-    weight: 2
   dy:
     contentDir: content/dy
     languageName: Test Language
