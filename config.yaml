@@ -14,7 +14,7 @@ languages:
           url: page/about/
           weight: 1
         - name: Projects
-          url: projects
+          url: blog
           weight: 2
     params:
       introPhoto: /ethan.jpg
