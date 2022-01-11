@@ -1,4 +1,4 @@
 ---
 author: Ethan Webb
-title: Blog
+title: Projects
 ---
