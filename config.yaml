@@ -16,12 +16,9 @@ languages:
         - name: About
           url: page/about/
           weight: 2
-        - name: Tags
-          url: tags
-          weight: 3
     params:
       introPhoto: /ethan.jpg
-      introSubtitle: 21 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make a positive change in the world.
+      introSubtitle: 22 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make a positive change in the world.
       introTitle: Hello, I'm Ethan Webb!
     weight: 1
 params:
@@ -32,14 +29,14 @@ params:
   favicon: /favicon.svg
   homepage:
     social:
-      description: I work on everything coding and tweet developer memes
-      dribbble: https://dribbble.com/
+      description: Keep up to date by following my professional social channels.
+      #dribbble: https://dribbble.com/
       github: https://github.com/
       linkedin: https://linkedin.com/in/
-      medium: https://medium.com/
-      reddit: https://reddit.com/
+      #medium: https://medium.com/
+      #reddit: https://reddit.com/
       title: Follow me
-      twitter: https://twitter.com/
+      #twitter: https://twitter.com/
 menu:
   main:
     - name: About
