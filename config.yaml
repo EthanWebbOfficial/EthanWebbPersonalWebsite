@@ -12,10 +12,10 @@ languages:
       main:
         - name: About
           url: page/about/
-          weight: 2
+          weight: 1
         - name: Projects
           url: projects
-          weight: 1
+          weight: 2
     params:
       introPhoto: /ethan.jpg
       introSubtitle: 22 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make a positive change in the world.
