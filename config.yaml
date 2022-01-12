@@ -28,6 +28,17 @@ languages:
       introTitle: Hello, I'm Ethan Webb!
       #button: page/about/
     weight: 1
+    education:
+      enable: true
+      title: "Education"
+      items:
+        - university: "University of Waterloo"
+          year: "2012-2017"
+          degree: "Bachelor of Applied Science (BASc), Electrical Engineering"
+    
+        - university: "Sir John A Macdonald CI"
+          year: "2009-2012"
+          degree: "High School Diploma, Sciences, Math, Computer & Business Studies"
 params:
   ascentColor: bg-blue-100
   copyright: Copyright © 2021 - Varun A P· All rights reserved. Modified by Ethan Webb.
@@ -61,15 +72,3 @@ markup:
       unsafe: yes
   highlight:
     style: dracula
-    
-education:
-  enable: true
-  title: "Education"
-  items:
-    - university: "University of Waterloo"
-      year: "2012-2017"
-      degree: "Bachelor of Applied Science (BASc), Electrical Engineering"
-
-    - university: "Sir John A Macdonald CI"
-      year: "2009-2012"
-      degree: "High School Diploma, Sciences, Math, Computer & Business Studies"
