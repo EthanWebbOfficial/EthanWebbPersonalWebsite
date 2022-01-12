@@ -5,7 +5,6 @@ theme: blist-hugo-theme
 
 # education
 education:
-  enable: true
   title: "Education"
   items:
     - university: "University of Waterloo"
