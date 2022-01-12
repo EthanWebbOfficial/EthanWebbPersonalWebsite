@@ -4,16 +4,16 @@
       <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.introTitle }}</h1>
       <p class="font-light text-lg">{{ .Site.Params.introSubtitle }}</p>
       
-      <!-- Added Section - Button With Smile -->
+<!-- Added Section - Button With Smile
       <a
-          href="{{ .Site.Data.homepage.about.button.URL | absURL }}"
+          href="{{ Site.Params.button | relLangURL }}"
           target="_blank"
           class="btn btn-primary"
         >
-          <i class="{{ .Site.Data.homepage.about.button.icon }}"></i>
-          {{ .Site.Data.homepage.about.button.btnText }}
+          <i class="icon-smile-fill"></i>
+          About Me
       </a>
-      <!-- Added Section - Button With Smile -->
+Added Section - Button With Smile -->
         
     </div>
     <img class="rounded-lg shadow-sm" src="{{ .Site.Params.introPhoto }}" alt="{{ .Site.Params.Title }}" />
