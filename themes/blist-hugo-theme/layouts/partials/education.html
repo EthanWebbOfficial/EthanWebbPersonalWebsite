@@ -1,26 +1,38 @@
 
-{{ if .Site.education.enable }}
+
 <section class="section section--border-bottom rad-animation-group">
     <div class="container">
         <div class="row rad-fade-down">
             <div class="col-12">
-                <h2>{{ .Site.education.title }}</h2>
+                <h2>Education</h2>
                 <div class="row pt-2 pt-md-4">
-                    {{ range .Site.education.items }}
+                    
+
                     <div class="col-12 col-sm-6 mb-4 mb-sm-0">
                         <div class="education">
-                            <div class="education__date">{{ .year }}</div>
-                            <div class="education__title">{{ .university }}</div>
+                            <div class="education__date">2018-Present</div>
+                            <div class="education__title">Lancastery University, UK</div>
                             <div class="education__degree">
-                                {{ .degree }}
+                                First Class BSc Mathematics <br>
+                                MSc Statistics
                             </div>
                         </div>
                     </div>
-                    {{ end }}
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2016-2018</div>
+                            <div class="education__title">Christopher Whitehead Language College and Sixth Form</div>
+                            <div class="education__degree">
+                                A Levels: Mathematics, Physics, Chemistry, Further Mathematics.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
-{{ end }}
+
 
