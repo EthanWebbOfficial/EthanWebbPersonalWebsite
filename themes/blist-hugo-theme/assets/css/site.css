@@ -98,6 +98,7 @@ body {
 	align-items: flex-start;
 	min-height: 131px
 }
+
 .education::before {
 	content: '';
 	position: absolute;
