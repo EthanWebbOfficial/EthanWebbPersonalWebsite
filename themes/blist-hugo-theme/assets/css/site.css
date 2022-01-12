@@ -129,6 +129,148 @@ body {
 	padding-bottom: 60px
 }
 
+.section .row.row--padded {
+	margin-top: 32px;
+	margin-bottom: 60px
+}
+@media (min-width:1200px) {
+	.section div[class*=col-].rad-col-text:first-child {
+		max-width: 500px;
+		margin-right: auto
+	}
+	.section div[class*=col-].rad-col-text:not(:first-child) {
+		max-width: 500px;
+		margin-left: auto
+	}
+}
+.section div[class*=col-].rad-col-text h2 {
+	text-align: center
+}
+@media (min-width:992px) {
+	.section {
+		padding-top: 80px;
+		padding-bottom: 80px
+	}
+	.section .row.row--padded {
+		margin-top: 80px;
+		margin-bottom: 80px
+	}
+	.section div[class*=col-].rad-col-text h2 {
+		text-align: left
+	}
+}
+.section div[class*=col-].rad-col-text p {
+	text-align: center
+}
+.section div[class*=col-] img {
+	max-width: 100%
+}
+.section div[class*=col-] img.image-left-overflow {
+	margin-left: 0
+}
+@media (min-width:768px) {
+	.img-clip-left-forward {
+		-webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+		clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%)
+	}
+	.img-clip-right-backward {
+		-webkit-clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 86% 0, 100% 100%, 0 100%)
+	}
+	.img-clip-right-forward {
+		-webkit-clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%)
+	}
+	.section div[class*=col-] img.image-left-overflow {
+		margin-left: -50px
+	}
+	.section div[class*=col-] img.image-right-overflow {
+		margin-right: -150px
+	}
+}
+.section--cta {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #000;
+	color: #fff
+}
+.section--cta .h2, .section--cta h2 {
+	color: #fff
+}
+.section--contact {
+	padding-bottom: 0;
+	background-image: url(../img/contact-bg.png);
+	background-repeat: repeat-x;
+	background-position: 0 100%
+}
+.section--contact .container {
+	background-color: #fff;
+	box-shadow: 0 42px 34px -16px rgba(0, 0, 0, .3)
+}
+.section li {
+	display: block;
+	position: relative;
+	padding-left: 15px;
+	font-size: 16px;
+	font-weight: 300;
+	color: rgba(0, 0, 0, .6);
+	line-height: 1.24;
+	margin-bottom: 12px;
+	text-align: left
+}
+.section li::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 4px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: #000
+}
+.header.collapse.show::before, .header.collapsing::before {
+	background-color: #fff;
+	opacity: 1
+}
+.header+.section {
+	margin-top: 120px
+}
+.section.four-o-four {
+	-webkit-box-flex: 1;
+	flex: 1
+}
+
+@media (min-width:992px) {
+	.section div[class*=col-].rad-col-text p {
+		text-align: left
+	}
+	.section div[class*=col-] img.image-left-overflow {
+		margin-left: -75px
+	}
+}
+
+@media (min-width:1200px) {
+	.section div[class*=col-] img.image-left-overflow {
+		margin-left: -120px
+	}
+}
+
+.rad-showcase+section {
+	margin-top: 0
+}
+
+@media (min-width:1200px) {
+	.rad-showcase {
+		min-height: 870px;
+		padding-top: 0;
+		margin-bottom: 0
+	}
+	.rad-showcase+section {
+		margin-top: -125px
+	}
+}
+
 /* Rad Animation Group */
 
 
