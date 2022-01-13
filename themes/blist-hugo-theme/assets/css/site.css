@@ -80,7 +80,7 @@ body {
 .gird_container{
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, 186px);
+  grid-template-columns: repeat(auto-fill, 400px);
 }
 
 /* Education */
@@ -140,8 +140,8 @@ body {
 
 .section {
 	position: relative;
-	padding-top: 60px;
-	padding-bottom: 60px
+	padding-top: 10px;
+	padding-bottom: 10px
 }
 
 /* Section */
