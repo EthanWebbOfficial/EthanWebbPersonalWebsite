@@ -79,7 +79,8 @@ body {
 
 .gird_container{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 186px);
 }
 
 /* Education */
