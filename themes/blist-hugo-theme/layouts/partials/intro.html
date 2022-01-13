@@ -3,6 +3,16 @@
     <div>
       <h1 class="text-4xl font-bold mb-4">{{ .Site.Params.introTitle }}</h1>
       <p class="font-light text-lg">{{ .Site.Params.introSubtitle }}</p>
+      
+      <div id="container">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">About Me</span>
+        </button>
+      </div>
+      
     </div>
     <img class="rounded-lg shadow-sm" src="{{ .Site.Params.introPhoto }}" alt="{{ .Site.Params.Title }}" />
   </div>
