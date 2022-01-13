@@ -1,6 +1,6 @@
 baseurl: https://www.mrethanwebb.com
 metaDataFormat: yaml
-title: Ethan Webb
+title: /EthanWebb.svg
 theme: blist-hugo-theme
 
 DefaultContentLanguage: en
@@ -32,7 +32,7 @@ languages:
 params:
   ascentColor: bg-blue-100
   copyright: Copyright © 2021 - Varun A P· All rights reserved. Modified by Ethan Webb.
-  darkModeToggle: yes
+  darkModeToggle: no
   enableSearch: no
   favicon: /favicon.svg
   homepage:
