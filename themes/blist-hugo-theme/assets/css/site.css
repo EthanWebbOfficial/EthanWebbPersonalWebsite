@@ -440,6 +440,7 @@ body {
 		 grid-area: main;
 		 align-self: center;
 		 justify-self: center;
+		 margin-top: 5px;
 	}
 }
 
