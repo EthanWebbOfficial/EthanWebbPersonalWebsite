@@ -17,12 +17,9 @@ languages:
         - name: Projects
           url: project
           weight: 2
-        - name: CV
-          url: 
-          weight: 3
         - name: Reading
           url: 
-          weight: 4
+          weight: 3
     params:
       introPhoto: /ethan.jpg
       introSubtitle: 22 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make a positive change in the world.
