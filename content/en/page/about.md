@@ -18,4 +18,4 @@ I have worked on a number of projects at University, with my most notable work b
 
 My hope is that I can use this website to showcase my project work, both within my degree and outside my studies, so that I can continue to learn and apply my skills as I did in this previous project.
 
-Outside of my studies, I am interested in sports and I am a loyal fan to both Birmingham City Football Club, and the Los Angeles Rams. I also enjoy reading about and studying business and psychology. 
+Outside of my studies, I am interested in sports and I am a loyal fan to both Birmingham City Football Club, and the Los Angeles Rams. I also enjoy reading about business and psychology. 
