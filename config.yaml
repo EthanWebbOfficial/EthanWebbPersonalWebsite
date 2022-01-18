@@ -26,6 +26,7 @@ languages:
       introTitle: Hello, I'm Ethan Webb!
       #button: page/about/
       expPhoto: /unilife.jpeg
+      cv: /Ethan_Webb_CV.pdf
     weight: 1
 params:
   ascentColor: bg-blue-100
