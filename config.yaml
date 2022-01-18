@@ -27,6 +27,7 @@ languages:
       #button: page/about/
       expPhoto: /unilife.jpeg
       cv: /Ethan_Webb_CV.pdf
+      aboutPhoto: /about.png
     weight: 1
 params:
   ascentColor: bg-blue-100

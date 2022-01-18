@@ -7,7 +7,7 @@ keywords:
 - contact
 title: About Me
 type: about
-thumbnail: https://picsum.photos/id/1019/500/200
+thumbnail: {{ .Site.Params.aboutPhoto }}
 ---
 
 Hello, I'm Ethan and I am an MSc Statistics student at Lancaster University, United Kingdom. 
