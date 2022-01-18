@@ -7,7 +7,7 @@ keywords:
 - contact
 title: About Me
 type: about
-thumbnail: {{ .Site.Params.aboutPhoto }}
+thumbnail: /about.png
 ---
 
 Hello, I'm Ethan and I am an MSc Statistics student at Lancaster University, United Kingdom. 
