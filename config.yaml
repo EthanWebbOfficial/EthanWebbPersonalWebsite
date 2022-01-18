@@ -25,6 +25,7 @@ languages:
       introSubtitle: 22 y/o MSc Statistics student who enjoys business, sports and using statistical analysis to make a positive change in the world.
       introTitle: Hello, I'm Ethan Webb!
       #button: page/about/
+      expPhoto: /unilife.jpeg
     weight: 1
 params:
   ascentColor: bg-blue-100
