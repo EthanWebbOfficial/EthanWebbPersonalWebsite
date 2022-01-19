@@ -22,10 +22,4 @@ math: true
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
 
-Here we have a time series analysis.
 
-Block math:
-
-$$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$

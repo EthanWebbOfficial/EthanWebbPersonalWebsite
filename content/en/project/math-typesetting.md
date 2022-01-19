@@ -28,6 +28,8 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 **Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html)
 
+
+<!-- START Keep For Maths -->
 {{< math.inline >}}
 {{ if or .Page.Params.math .Site.Params.math }}
 
@@ -37,6 +39,7 @@ In this example we will be using [KaTeX](https://katex.org/)
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 {{ end }}
 {{</ math.inline >}}
+<!-- END Keep For Maths -->
 
 ### Examples
 
