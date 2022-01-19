@@ -18,7 +18,7 @@ languages:
           url: project
           weight: 2
         - name: Reading
-          url: 
+          url: page/reading/
           weight: 3
     params:
       introPhoto: /ethan.jpg
