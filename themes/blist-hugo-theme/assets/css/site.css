@@ -1,6 +1,7 @@
 /* Custom Styles */
 body {
   font-family: "Inter", sans-serif;
+  display: block;
 }
 
 /* Fonts */
@@ -494,20 +495,20 @@ button:hover .button-text_a {
 } */
 .box .percent
 {
-  width:75px;
-  height:75px;
+  width:150px;
+  height:150px;
   position:relative;
 }
 .box .percent svg
 {
-  width:75px;
-  height:75px;
+  width:150px;
+  height:150px;
   position:relative;
 }
 .box .percent svg circle
 {
-  width:75px;
-  height:75px;
+  width:150px;
+  height:150px;
   fill:none;
   stroke-width:10;
   stroke:#000;
@@ -542,7 +543,7 @@ button:hover .button-text_a {
 }
 .box .percent .num h2
 {
-  font-size:35px;
+  font-size:48px;
 }
 .box .percent .num h2 span
 {
@@ -550,7 +551,7 @@ button:hover .button-text_a {
 }
 .box .text
 {
-  padding: 10px 0 0;
+  padding 10px 0 0;
   color:#999;
   font-weight:700;
   letter-spacing:1px;
