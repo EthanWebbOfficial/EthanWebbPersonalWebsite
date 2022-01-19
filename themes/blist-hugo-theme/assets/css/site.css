@@ -482,8 +482,8 @@ button:hover .button-text_a {
 .box
 {
   background:#fff;
-  width:200px;
-  height:200px;
+  width:230px;
+  height:230px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -557,6 +557,8 @@ button:hover .button-text_a {
   color:#999;
   font-weight:700;
   letter-spacing:1px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 
