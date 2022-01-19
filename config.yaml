@@ -18,7 +18,7 @@ languages:
           url: project
           weight: 2
         - name: Reading
-          url: ./themes/blist-hugo-theme/layouts/reading.html
+          url: reading
           weight: 3
     params:
       introPhoto: /ethan.jpg
