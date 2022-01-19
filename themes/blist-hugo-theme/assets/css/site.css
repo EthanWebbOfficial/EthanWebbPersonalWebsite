@@ -489,7 +489,7 @@ button:hover .button-text_a {
   align-items:center;
   position:relative;
   flex-direction:column;
-  box-shadow:0 30px 60px rgba(0,0,0,.4);
+  box-shadow:0 0px 20px rgb(0 0 0 / 10%);
   transition: transform .2s;
 }
 /* .box:hover
