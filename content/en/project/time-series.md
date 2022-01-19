@@ -1,8 +1,7 @@
 ---
 author: Ethan Webb
 date: "18-01-22"
-description: Analysis Of COVID-19 Daily New Deaths Of
-Poland and Germany
+description: Analysis Of COVID-19 Daily New Deaths Of Poland and Germany
 tags:
 - shortcodes
 - privacy
