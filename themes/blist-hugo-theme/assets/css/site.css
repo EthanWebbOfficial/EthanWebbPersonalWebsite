@@ -494,20 +494,20 @@ button:hover .button-text_a {
 } */
 .box .percent
 {
-  width:150px;
-  height:150px;
+  width:75px;
+  height:75px;
   position:relative;
 }
 .box .percent svg
 {
-  width:150px;
-  height:150px;
+  width:75px;
+  height:75px;
   position:relative;
 }
 .box .percent svg circle
 {
-  width:150px;
-  height:150px;
+  width:75px;
+  height:75px;
   fill:none;
   stroke-width:10;
   stroke:#000;
@@ -542,7 +542,7 @@ button:hover .button-text_a {
 }
 .box .percent .num h2
 {
-  font-size:48px;
+  font-size:35px;
 }
 .box .percent .num h2 span
 {
