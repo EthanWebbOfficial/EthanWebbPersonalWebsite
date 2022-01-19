@@ -1,7 +1,6 @@
 /* Custom Styles */
 body {
   font-family: "Inter", sans-serif;
-  display: block;
 }
 
 /* Fonts */
@@ -449,13 +448,17 @@ body {
 button:hover .button-text_a {
 	 color: #fff;
 }
- @supports (display: grid) {
+ 
+/* COMMENT OUT */ 
+ 
+/*@supports (display: grid) {
 	 body {
 		 display: grid;
 		 grid-template-columns: repeat(4, 1fr);
 		 grid-gap: 0.625rem;
 		 grid-template-areas: ". main main ." ". main main .";
-	}
+}*/
+	
 	 #container {
 		 grid-area: main;
 		 align-self: center;
