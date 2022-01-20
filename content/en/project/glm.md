@@ -20,3 +20,7 @@ title: Smoking - Generalised Linear Models
 {{ end }}
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
+
+**Context:** As part of my Generalised Linear Models module, I worked in a group of 5 to produce a project, analysing the factors that contributed to smoking - using a fictional dataset. <mark>We achieved a grade of 95% on this report.</mark>
+
+
