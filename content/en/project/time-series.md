@@ -22,12 +22,12 @@ math: true
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
 
-**Context:** As part of my Time Series module, I worked in a group of 3 to use the skills learned during the course to produce a report and deliver a presentation on a data relating to the Covid-19 pandemic. We chose to compare the daily new deaths of Germany and Poland since they share a boarder and had contrasting governance approaches to the pandemic. <mark>We scored 90\% on this project.</mark> I was very proud of this because this project was a supposed to be done in groups of 4, however I was assigned to a group of 3 - with 2 people that spoke English as their second language. I learnt some great communication skills as a result. 
+**Context:** As part of my Time Series module, I worked in a group of 3 to use the skills learned during the course to produce a report and deliver a presentation on a data set relating to the Covid-19 pandemic. We chose to compare the daily new deaths of Germany and Poland since they share a boarder and had contrasting governance approaches to the pandemic. <mark>We scored 90\% on this project.</mark> I was very proud of this because the project was supposed to be done in groups of 4, however I was assigned to a group of 3 - with 2 people that spoke English as their second language. I learnt some great communication skills as a result. 
 
 
 ### Abstract
 
-In this report we analysed Polish and German daily new deaths, recorded from March, 2020 to January, 2021, by considering $\mathbf{SARIMA}$ models using an iterative Box-Jenkins approach. We conclude that for Polish data the best fitting model is $\mathbf{SARIMA(3, 1, 4, 2, 1, 1, s = 7)}$, whilst for Germany $\mathbf{SARIMA(3, 1, 2, 1, 0, 1, s = 7)}$. Our forecasting results suggest good performance across the models, validating their effectiveness. We discussed other important factors such as governments' response and also the limitations of our work. Finally, we explored ideas on how we could improve our analysis.
+In this report we analysed Polish and German daily new deaths, recorded from March, 2020 to January, 2021, by considering \\(\mathbf{SARIMA}\\) models using an iterative Box-Jenkins approach. We conclude that for Polish data the best fitting model is $\mathbf{SARIMA(3, 1, 4, 2, 1, 1, s = 7)}$, whilst for Germany $\mathbf{SARIMA(3, 1, 2, 1, 0, 1, s = 7)}$. Our forecasting results suggest good performance across the models, validating their effectiveness. We discussed other important factors such as governments' response and also the limitations of our work. Finally, we explored ideas on how we could improve our analysis.
 
 
 
