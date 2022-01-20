@@ -86,31 +86,10 @@ Following this, we forecast our data (over the forecast horizon) using a fixed o
 
 ## Results
 
-$$\begin{table*}[t]\scriptsize
-        \vspace{-0.3cm}
-        \centering
-        \begin{tabular}{c|c| c | c | c | c | c | c |c} 
-        \hline
-        \textbf{Data} & \textbf{Model} & \textbf{AIC} & \textbf{Log-Likelihood }& \textbf{Ljung-Box} & \textbf{MAE Av.}& \textbf{RMSE Av.}&  \textbf{MAE Roll. O. (k=1)} & \textbf{RMSE Roll. O. (k=1)} \\ [0.4ex] 
-        \hline
-         Polish & ARIMA(2, 1, 2) & 690.527 & -339.26 & 0.8102 & - & - & - & -\\
-         Polish & ARIMA(3, 1, 4) & 696.4566 & -339.23 & 0.9779 & - & - & - & -\\
-         Polish & ARIMA(1, 1, 3) & 714.0732 & -351.04 & 0.7366 & - & - & - & -\\
-         Polish & SARIMA(2, 1, 2, 0, 1, 2, s = 7) & 642.42 & -314.39 & 0.9978 & 1.177 & 1.346 & 0.381 & 0.504\\         
-         \vspace{0.15cm}
-         Polish & SARIMA(3, 1, 4, 2, 1, 1, s = 7) & 638.695& -308.35 & 0.943 & 1.283 & 1.419 & 0.371 & 0.498 \\
-         German & ARIMA(3, 0, 2) & 995.14 & -490.57 & 0.7555 & - & - & - & -\\
-         German & ARIMA(4, 0, 2) & 992.63 & -488.32 & 0.6898 & - & - & - & -\\
-         German & ARIMA(5, 0, 2) & 979.52 & -480.76 & 0.8863 & - & - & - & -\\
-         German & SARIMA(3, 1, 2, 1, 0, 1, s = 7) & 957.27 & -469.64 & 0.9999 & 1.045 & 1.092 & 0.272 & 0.342\\ 
-         German & SARIMA(5, 1, 2, 1, 0, 1, s = 7) & 961.46 & -469.73 & 0.9718 & 0.883 & 0.037 & 0.261 & 0.33\\
-        \hline
-        \end{tabular}
-        \vspace{0.3cm}
-        \caption{\footnotesize{Score comparisons for the Polish and German models.}}
-        \label{scores}
-        \vspace{-0.3cm}
-    \end{table*}$$
+<figure>
+<img src="/table_ts.png" style="width:100%">
+<figcaption align = "center"><b>Table 1 : Score comparisons for the Polish and German models.</b></figcaption>
+</figure>
 
 ### Polish Model
 
