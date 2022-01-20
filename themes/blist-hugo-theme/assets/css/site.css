@@ -526,10 +526,10 @@ button:hover .button-text_a {
   stroke:#f3f3f3;
 }
 
-/* Change 5 in (440 * 5) For Percentage Change*/
+/* Change 9 in (440 * 9) For Percentage Change*/
 .box .percent svg circle:nth-child(2)
 {
-  stroke-dashoffset:calc(440 - (440 * 5) / 100);
+  stroke-dashoffset:calc(440 - (440 * 9) / 100);
   stroke:#03a9f4;
 }
 .box .percent .num
