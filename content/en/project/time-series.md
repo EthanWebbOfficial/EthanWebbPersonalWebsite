@@ -43,7 +43,16 @@ In our study, we build models to predict the number of new deaths, and compare t
 
 ## Methods
 
+To begin the process of our analysis, we first layout our intentions. We wish to compare the new daily deaths of Germany and Poland. As a result, we first examine the raw data, to explore trends and stationarity, before fitting models in order to forecast how the new daily deaths might progress – all so we can assess the similarities and differences between the two countries.  
+
 ### Preliminary Analysis
+
+To build our models we rely on useful results such as Wold's Decomposition, which allows us to write one time series as the sum of two time series - one deterministic and one stochastic. In order to use this result, we require our data to be independent and have constant stochastic properties, in other words we need stationarity. Upon our initial plots (Fig. 1), it is evident that the raw data does not meet this condition since the mean is not constant, whilst the variance and covariance differ across time. This observation is reaffirmed by an Augmented Dickey-Fuller Test (ADF) on the raw data, which yields  p-values of 0.9286 and 0.99, for Poland and Germany respectively. 
+
+<figure>
+<img src="/Polish&German.png" style="width:50%">
+<figcaption align = "center"><b>Figure 1 : Poland's (Red) and Germany's (Blue) new daily deaths.</b></figcaption>
+</figure>
 
 ### Model Fitting
 
