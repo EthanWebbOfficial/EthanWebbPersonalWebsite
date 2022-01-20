@@ -54,15 +54,106 @@ To build our models we rely on useful results such as Wold's Decomposition, whic
 <figcaption align = "center"><b>Figure 1 : Poland's (Red) and Germany's (Blue) new daily deaths.</b></figcaption>
 </figure>
 
+
+With the stationary data, we then examine the Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) for each time series. From this initial analysis, we gain insight into the potential Autoregressive and Moving Average components of each series as well as if there is any seasonality. Firstly, we notice that both data sets have significant peaks at lags of multiples of 7, suggesting a seasonality with period 7. 
+
+Using $\mathrm{ARIMA}(p,d,q)$ models, we see no clear cut-offs in the ACFs and PACFs. However, for Polish data (Fig. 2), we observe significant peaks on the ACF and PACF that suggest the p values of $2,3 \text{ or } 4$ and q values of $1,2 \text{ or } 3$. Whereas for Germany (Fig. 3), p values of the range $2 \text{ to } 5$ and q is $1 \text{ or } 2$.
+
+<figure>
+<img src="/acf_pacf.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 2 : ACF and PACF of differenced log Polish data.</b></figcaption>
+</figure>
+
+<figure>
+<img src="/ACFPACFGermLogDiff.png" style="width:100%">
+<figcaption align = "center"><b>Figure 3 : ACF and PACF of differenced log German data.</b></figcaption>
+</figure>
+
 ### Model Fitting
+
+Once we have stationary data, we try to find the best fit SARIMA models by using a manual, iterative Box-Jenkins approach. 
+
+Before we begin building our models, we need to segment our data into training and test sets so we can assess the ability of our models to forecast the time series. Taking 10\% of the data leaves a forecast horizon of 31 days for the Polish data and 35 days for the German data.
+
+The modelling procedure is composed of five iterative steps: estimation of $\mathrm{ARIMA}$ parameters, diagnostic checking, estimation of $\mathrm{SARIMA}$ parameters, further diagnostic checking and finally prediction.
+
+Since there is no clear cut off in either data's ACF and PACF, we start the process with an $\mathrm{ARIMA}(1,1,1)$ and iterate, changing the p and q values until the best model has been found. To check the models, we look at the p-value of the Ljung-Box statistic, which should be above the threshold of 0.05. This tests the randomness of our residuals. Then, by plotting the ACF and PACF of the residuals, we look for the resemblance of white noise. Lastly, we select the model based on information criterion, such as Akaike’s Information Criterion (AIC), which measures the degrees of freedom/numbers of free parameters. As a result, we aim to choose a suitable model with the least AIC score in order to avoid over-fitting.
+
+
+The seasonality to our data means that we can improve our $\mathrm{ARIMA}$ models by adding MA and AR components for seasonality - forming a $\mathrm{SARIMA}$ model. Hence we repeat the process above, but for the seasonal component, until settling on the best models for each data set.
+
+Following this, we forecast our data (over the forecast horizon) using a fixed origin approach. We are then able to compare these forecasts to the real data to assess their ability. We finally use Error Matrix tests to measure the strength of, and error in, our predictions.   
 
 ## Results
 
+$$\begin{table*}[t]\scriptsize
+        \vspace{-0.3cm}
+        \centering
+        \begin{tabular}{c|c| c | c | c | c | c | c |c} 
+        \hline
+        \textbf{Data} & \textbf{Model} & \textbf{AIC} & \textbf{Log-Likelihood }& \textbf{Ljung-Box} & \textbf{MAE Av.}& \textbf{RMSE Av.}&  \textbf{MAE Roll. O. (k=1)} & \textbf{RMSE Roll. O. (k=1)} \\ [0.4ex] 
+        \hline
+         Polish & ARIMA(2, 1, 2) & 690.527 & -339.26 & 0.8102 & - & - & - & -\\
+         Polish & ARIMA(3, 1, 4) & 696.4566 & -339.23 & 0.9779 & - & - & - & -\\
+         Polish & ARIMA(1, 1, 3) & 714.0732 & -351.04 & 0.7366 & - & - & - & -\\
+         Polish & SARIMA(2, 1, 2, 0, 1, 2, s = 7) & 642.42 & -314.39 & 0.9978 & 1.177 & 1.346 & 0.381 & 0.504\\         
+         \vspace{0.15cm}
+         Polish & SARIMA(3, 1, 4, 2, 1, 1, s = 7) & 638.695& -308.35 & 0.943 & 1.283 & 1.419 & 0.371 & 0.498 \\
+         German & ARIMA(3, 0, 2) & 995.14 & -490.57 & 0.7555 & - & - & - & -\\
+         German & ARIMA(4, 0, 2) & 992.63 & -488.32 & 0.6898 & - & - & - & -\\
+         German & ARIMA(5, 0, 2) & 979.52 & -480.76 & 0.8863 & - & - & - & -\\
+         German & SARIMA(3, 1, 2, 1, 0, 1, s = 7) & 957.27 & -469.64 & 0.9999 & 1.045 & 1.092 & 0.272 & 0.342\\ 
+         German & SARIMA(5, 1, 2, 1, 0, 1, s = 7) & 961.46 & -469.73 & 0.9718 & 0.883 & 0.037 & 0.261 & 0.33\\
+        \hline
+        \end{tabular}
+        \vspace{0.3cm}
+        \caption{\footnotesize{Score comparisons for the Polish and German models.}}
+        \label{scores}
+        \vspace{-0.3cm}
+    \end{table*}$$
+
 ### Polish Model
+
+#### ARIMA Selection
+
+Using R, we choose different permutations of parameters, starting from $\mathrm{ARIMA}(1,1,1)$, and select the best fitting models as described in the previous section. The scores for each test of the most appropriate models are displayed in the Table \ref{scores}. Based on that, we consider $\mathrm{ARIMA}(2,1,2)$ and $\mathrm{ARIMA}(3,1,4)$ for the SARIMA process.
+
+#### SARIMA Selection
+
+Building on $\mathrm{ARIMA}$, we repeat the process for the seasonal component and obtain two best performing models $\mathrm{SARIMA}(2,1,2, 0,1,2, s=7)$ and $\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)$. The ACF and PACF plots of their residuals (Fig. 4) are suitable for white noise, with a slightly better performance of the latter model.
+
+<figure>
+<img src="/res1.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 4 : ACF and PACF of residuals for both Polish models.</b></figcaption>
+</figure>
+
+#### Model Selection
+
+For the final selection, we consider the complexity of the models – the first one is simpler than the second. For the Ljung-Box statistic - both pass the p-value threshold of 0.05 and residuals look like white noise. Finally, by comparing the AIC score, we choose $\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)$.
 
 ### German Model
 
+#### ARIMA Selection
+
+Similarly, we use R to repeat this process for the German data. The best performing 3 models across the selection criteria were $\mathrm{ARIMA}(3,1,2)$, $\mathrm{ARIMA}(4,1,2)$ and $\mathrm{ARIMA}(5,1,2)$ (see Table \ref{scores}), which we iterate on for the seasonal component to find the best $\mathrm{SARIMA}$ model.
+
+#### SARIMA Selection
+
+Further iteration on the seasonal MA and AR parameters provides $\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)$ and $\mathrm{SARIMA}(5,1,2,1,0,1, s = 7)$ as the most appropriate models. 
+
+#### Model Selection
+
+In order to select the leading $\mathrm{SARIMA}$ model we require residuals that resemble white noise, so we plot the two model's respective residual's ACF and PACF. Both of these are suitable. Since both models have p-values close to one across many lags for the Ljung-Box statistic, we choose the simpler model $\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)$ which has a lower AIC score.
+
+
+<figure>
+<img src="/res2.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 5 : ACF and PACF of residuals for both German models.</b></figcaption>
+</figure>
+
 ### Forecasting Models For Both Countries
+
+
 
 ## Discussion
 
