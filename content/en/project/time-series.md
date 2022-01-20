@@ -130,6 +130,8 @@ In order to select the leading $\mathrm{SARIMA}$ model we require residuals that
 <figcaption align = "center"><b>Figure 5 : ACF and PACF of residuals for both German models.</b></figcaption>
 </figure>
 
+
+
 ### Forecasting Models For Both Countries
 
 
@@ -158,4 +160,4 @@ In order to select the leading $\mathrm{SARIMA}$ model we require residuals that
 
 7. A. A.-S. N.-F. A.Ramadan, A. Kamel, “A multivariate data analysis approach for investigating daily statistics of countries affected with covid-19 pandemic,” 2020, source accessed on 05-02-2021 "https://www.sciencedirect.com/science/article/pii/S240584402032418X". 5
 
-8. A. Singh, “A multivariate time series guide to forecasting and modeling,” 2020, source accessed on 05-02-2021 "https://www.analyticsvidhya.com/blog/2018/09/multivariate-time-series-guide-forecasting-modeling-python-codes/#:∼:text=A%20Multivariate%20time%20series%20has,used%20for%20forecasting%20future%20values.&text=In%20this%20case%2C%20there%20are,considered%20to%20optimally%20predict%20temperature". 5
+8. A. Singh, “A multivariate time series guide to forecasting and modeling,” 2020, source accessed on 05-02-2021 "https://www.analyticsvidhya.com/blog/2018/09/multivariate-time-series-guide-forecasting-modeling-python-codes/#:". 5
