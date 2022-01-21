@@ -151,20 +151,20 @@ For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k
 The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2, 1, 2, 0, 1, 2, s=7)\\) is:
 
 
-\begin{aligned}
+\\( \\( \begin{aligned}
 &\left(1-\phi_{1} B-\phi_{2} B^{2}\right)(1-B)\left(1-B^{7}\right)\left(x_{n+k}-\mu\right)= \\
 &\left(1+\theta_{1} B+\theta_{2} B^{2}\right)\left(1+\Theta_{1} B^{7}+\Theta_{2} B^{14}\right) e_{n+k}
-\end{aligned}
+\end{aligned} \\) \\)
 
 
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
 
-\begin{aligned}
+\\( \\( \begin{aligned}
 \hat{x}_{n, k} &=\hat{x}_{n, k-1}\left(\phi_{1}-1\right)+\hat{x}_{n, k-2}\left(\phi_{2}-\phi_{1}\right)-\phi_{2} \hat{x}_{n, k-3}+\\
 &+\hat{x}_{n, k-7}-\hat{x}_{n, k-8}\left(1+\phi_{1}\right)+\hat{x}_{n, k-9}\left(\phi_{1}-\phi_{2}\right)+\\
 &+\phi_{2} \hat{x}_{n, k-10}
-\end{aligned}
+\end{aligned} \\) \\)
 
 
 Similar can be written for other models.
@@ -206,7 +206,7 @@ Therefore, we can consider multivariate time series models and involve more para
 One of the forecasting methods for multivariate time series is Vector Auto Regression [8], in which each variable is a linear function of the past values of itself and the past of other variables. For two time-dependent variables the equation is
 
 
-\left[\begin{array}{l}
+\\( \\( \left[\begin{array}{l}
 x_{1}(t) \\
 x_{2}(t)
 \end{array}\right]=\left[\begin{array}{l}
@@ -221,7 +221,7 @@ x_{2}(t-2)
 \end{array}\right]+\left[\begin{array}{l}
 e_{1}(t) \\
 e_{2}(t)
-\end{array}\right]
+\end{array}\right] \\) \\)
 
             
 \\(a_1, a_2\\) - constant terms.
