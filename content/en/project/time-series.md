@@ -47,6 +47,8 @@ To begin the process of our analysis, we first layout our intentions. We wish to
 
 ### Preliminary Analysis
 
+<mark>[Note that this following paragraph is slightly incorrect.]</mark>
+
 To build our models we rely on useful results such as Wold's Decomposition, which allows us to write one time series as the sum of two time series - one deterministic and one stochastic. In order to use this result, we require our data to be independent and have constant stochastic properties, in other words we need stationarity. Upon our initial plots (Fig. 1), it is evident that the raw data does not meet this condition since the mean is not constant, whilst the variance and covariance differ across time. This observation is reaffirmed by an Augmented Dickey-Fuller Test (ADF) on the raw data, which yields  p-values of 0.9286 and 0.99, for Poland and Germany respectively. 
 
 <figure>
@@ -148,20 +150,20 @@ For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k
 The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2, 1, 2, 0, 1, 2, s=7)\\) is:
 
 
-    \begin{align*}
+    $$\begin{align*}
       & (1 - \phi_1B - \phi_2B^2)(1-B)(1-B^7)(x_{n+k}-\mu) = \\
       &(1+\theta_1B + \theta_2B^2)(1+\Theta_1B^7 + \Theta_2B^{14})e_{n+k}
-    \end{align*}
+    \end{align*}$$
 
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
-    \begin{equation*}
+    $$\begin{equation*}
        \begin{split}
           \hat{x}_{n,k} &= \hat{x}_{n,k-1}(\phi_1 -1) + \hat{x}_{n,k-2}(\phi_2-\phi_1) - \phi_2\hat{x}_{n,k-3} + \\
           &+ \hat{x}_{n,k-7} - \hat{x}_{n,k-8}(1+\phi_1) + \hat{x}_{n,k-9}(\phi_1 - \phi_2) + \\
           &+ \phi_2 \hat{x}_{n,k-10}
        \end{split}
-    \end{equation*}
+    \end{equation*}$$
 
 Similar can be written for other models.
 
@@ -201,7 +203,7 @@ Therefore, we can consider multivariate time series models and involve more para
 
 One of the forecasting methods for multivariate time series is Vector Auto Regression [8], in which each variable is a linear function of the past values of itself and the past of other variables. For two time-dependent variables the equation is
 
-\[ \begin{bmatrix}
+$$\begin{bmatrix}
             x_1(t) \\
             x_2(t) \\
             \end{bmatrix}
@@ -223,7 +225,7 @@ One of the forecasting methods for multivariate time series is Vector Auto Regre
             \begin{bmatrix}
              e_1(t) \\
              e_2(t)
-            \end{bmatrix}\]\\
+            \end{bmatrix}$$
             
 \\(a_1, a_2\\) - constant terms.
 
