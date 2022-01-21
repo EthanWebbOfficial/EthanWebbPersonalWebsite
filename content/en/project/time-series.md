@@ -153,11 +153,11 @@ For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k
 
 The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2, 1, 2, 0, 1, 2, s=7)\\) is:
 
-\\( \left(1-\hat{\phi}_{1} B-\phi_{2} B^{2}\right)(1-B)\left(1-B^{7}\right)\left(x_{n+k}-\mu\right)=\left(1+\theta_{1} B+\theta_{2} B^{2}\right)\left(1+\Theta_{1} B^{7}+\Theta_{2} B^{14}\right) e_{n+k} \\)
+\\( \left(1-\phi_{1} B-\phi_{2} B^{2}\right)(1-B)\left(1-B^{7}\right)\left(x_{n+k}-\mu\right)=\left(1+\theta_{1} B+\theta_{2} B^{2}\right)\left(1+\Theta_{1} B^{7}+\Theta_{2} B^{14}\right) e_{n+k} \\)
 
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
-\\( \left(1-\phi_{1} B-\phi_{2} B^{2}\right)(1-B)\left(1-B^{7}\right)\left(x_{n+k}-\mu\right)=\left(1+\theta_{1} B+\theta_{2} B^{2}\right)\left(1+\Theta_{1} B^{7}+\Theta_{2} B^{14}\right) e_{n+k} \\)
+<img src="/equation1.png" style="width:100%">
 
 Similar can be written for other models.
 
