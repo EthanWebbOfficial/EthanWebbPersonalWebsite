@@ -66,26 +66,19 @@ To begin testing the appropriateness of this model, we conduct a model deviance 
 
 We then repeat the deviance test with our new model. We get a model deviance of `r moddev2` (3.s.f) which is less than the critical value at the 5\% significant level - `r devcrit2` (3.s.f). Therefore, our new model is a much better fit than its previous Poisson counterpart. This is further reinforced by a plot of the residuals against the fitted model (Figure 1), which shows no clear pattern and implies a good model fit.
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-Run & Iteration 1         & p-value (3.s.f) & Iteration 2            & p-value (3.s.f) & Iteration 3           & p-value (3.s.f) \\ \hline
-P1  & $\mathrm{A_i} \times \mathrm{Z_i}$ &    `r pval1`     & $\mathrm{A_i} \times \mathrm{R_i}$ &   `r pval2`      & $\mathrm{A_i} \times \mathrm{B_i}$ &    `r pval3`     \\ \hline
-P2  & $\mathrm{A_i} \times \mathrm{Z_i}$ &    `r pval4`     & $\mathrm{A_i} \times \mathrm{R_i}$ &    `r pval5`     & $\mathrm{A_i} \times \mathrm{B_i}$ &    `r pval6`     \\ \hline
-P3  & $\mathrm{A_i} \times \mathrm{Z_i}$ &     `r pval7`    & $\mathrm{A_i} \times \mathrm{B_i}$ &     `r pval8`    &                                    &         \\ \hline
-NB1 & $\mathrm{A_i} \times \mathrm{Z_i}$ &     `r pval9`    & $\mathrm{A_i} \times \mathrm{R_i}$ &     `r pval10`    & $\mathrm{A_i} \times \mathrm{B_i}$ &   `r pval11`      \\ \hline
-NB2 & $\mathrm{A_i} \times \mathrm{Z_i}$ &      `r pval12`   & $\mathrm{A_i} \times \mathrm{R_i}$ &     `r pval13`    & $\mathrm{A_i} \times \mathrm{B_i}$ &   `r pval14`      \\ \hline
-NB3 & $\mathrm{A_i} \times \mathrm{Z_i}$ &     `r pval15`    &  &       &                                &         \\ \hline
-\end{tabular}
-\caption{Significant p-values for each forward selection run through (both for Poisson and Negative Binomial Model), with interaction added at each iteration.}
-\label{forward}
-\end{table}
+| Run | Iteration 1                        | p-value (3.s.f) | Iteration 2                        | p-value (3.s.f) | Iteration 3                        | p-value (3.s.f) |
+|-----|------------------------------------|-----------------|------------------------------------|-----------------|------------------------------------|-----------------|
+| P1  | $\mathrm{A_i} 	imes \mathrm{Z_i}$  | `r pval1`       | $\mathrm{A_i} \times \mathrm{R_i}$ | `r pval2`       | $\mathrm{A_i} \times \mathrm{B_i}$ | `r pval3`       |
+| P2  | $\mathrm{A_i} \times \mathrm{Z_i}$ | `r pval4`       | $\mathrm{A_i} \times \mathrm{R_i}$ | `r pval5`       | $\mathrm{A_i} \times \mathrm{B_i}$ | `r pval6`       |
+| P3  | $\mathrm{A_i} \times \mathrm{Z_i}$ | `r pval7`       | $\mathrm{A_i} \times \mathrm{B_i}$ | `r pval8`       |                                    |                 |
+| NB1 | $\mathrm{A_i} \times \mathrm{Z_i}$ | `r pval9`       | $\mathrm{A_i} \times \mathrm{R_i}$ | `r pval10`      | $\mathrm{A_i} \times \mathrm{B_i}$ | `r pval11`      |
+| NB2 | $\mathrm{A_i} \times \mathrm{Z_i}$ | `r pval12`      | $\mathrm{A_i} \times \mathrm{R_i}$ | `r pval13`      | $\mathrm{A_i} \times \mathrm{B_i}$ | `r pval14`      |
+| NB3 | $\mathrm{A_i} \times \mathrm{Z_i}$ | `r pval15`      |                                    |                 |                                    |                 |
 
-\begin{figure}
-\centering
-\caption{Left: Plot of Residuals Against Fitted Model. Right: Plot of Leverage By Observation.}
-\end{figure}
+<figure>
+<img src="/residuals_for_birds.jpeg" style="width:100%">
+<figcaption align = "center"><b>Left: Plot of Residuals Against Fitted Model. Right: Plot of Leverage By Observation.</b></figcaption>
+</figure>
 
 ## Analysis and Conclusion
 
