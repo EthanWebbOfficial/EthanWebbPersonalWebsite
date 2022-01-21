@@ -158,7 +158,7 @@ The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
 
-\\(\hat{x}_{n,k} = \hat{x}_{n,k-1}(\phi_1 -1) + \hat{x}_{n,k-2}(\phi_2-\phi_1) - \phi_2\hat{x}_{n,k-3} + \hat{x}_{n,k-7} - \hat{x}_{n,k-8}(1+\phi_1) + \hat{x}_{n,k-9}(\phi_1 - \phi_2) + \phi_2 \hat{x}_{n,k-10}\\)
+katex.render("\\hat{x}_{n,k} = \\hat{x}_{n,k-1}(\\phi_1 -1) + \\hat{x}_{n,k-2}(\\phi_2-\\phi_1) - \\phi_2\\hat{x}_{n,k-3} + \\hat{x}_{n,k-7} - \\hat{x}_{n,k-8}(1+\\phi_1) + \\hat{x}_{n,k-9}(\\phi_1 - \\phi_2) + \\phi_2 \\hat{x}_{n,k-10}\n", /* element */, {"displayMode":true,"leqno":false,"fleqn":false,"throwOnError":true,"errorColor":"#cc0000","strict":"warn","output":"htmlAndMathml","trust":false,"macros":{"\\f":"#1f(#2)"}})
 
 Similar can be written for other models.
 
