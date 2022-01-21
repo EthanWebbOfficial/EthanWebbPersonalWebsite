@@ -162,7 +162,9 @@ The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
 
-\\( \hat{x}_{n, k} =\hat{x}_{n, k-1}\left(\phi_{1}-1\right)+\hat{x}_{n, k-2}\left(\phi_{2}-\phi_{1}\right)-\phi_{2} \hat{x}_{n, k-3}+\hat{x}_{n, k-7}-\hat{x}_{n, k-8}\left(1+\phi_{1}\right)+\hat{x}_{n, k-9}\left(\phi_{1}-\phi_{2}\right)+\phi_{2} \hat{x}_{n, k-10} \\)
+$$
+\hat{x}_{n, k} =\hat{x}_{n, k-1}\left(\phi_{1}-1\right)+\hat{x}_{n, k-2}\left(\phi_{2}-\phi_{1}\right)-\phi_{2} \hat{x}_{n, k-3}+\hat{x}_{n, k-7}-\hat{x}_{n, k-8}\left(1+\phi_{1}\right)+\hat{x}_{n, k-9}\left(\phi_{1}-\phi_{2}\right)+\phi_{2} \hat{x}_{n, k-10}
+$$
 
 Similar can be written for other models.
 
