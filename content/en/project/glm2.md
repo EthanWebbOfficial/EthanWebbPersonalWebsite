@@ -1,6 +1,6 @@
 ---
 author: Ethan Webb
-date: "2022-01-18"
+date: "2022-01-16"
 description: Modelling The Number Of Feeds For Bird Chicks
 tags:
 - shortcodes
@@ -21,4 +21,4 @@ title: Bird Chick Feeding - Generalised Linear Models
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
 
-**Context:** As part of my Statistical Fundamentals module I wrote a report on some Bird Chick Feeding Data (fictional), analysing which factors affect the amount of food chicks from this species receive. I was disappointment in my work this project because I felt I could have done better given more time. <mark>I was awarded a letter grade of A for this project which translated to 75\% (presumably to mitigate against grade inflation).</mark> My work in this project was a contributing factor in the lecturers decision to approach me about a PhD opportunity.
+**Context:** As part of my Statistical Fundamentals module I wrote a report on some Bird Chick Feeding Data (fictional), analysing which factors affect the amount of food chicks from this species receive. I was disappointment in my work for this project because I felt I could have done better given more time. <mark>I was awarded a letter grade of A for this project which translated to 75\% (presumably to mitigate against grade inflation).</mark> My work in this project, alongside my coursework grades, was a contributing factor in the lecturers decision to approach me about a PhD opportunity with him.

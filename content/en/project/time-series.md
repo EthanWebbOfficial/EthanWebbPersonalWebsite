@@ -1,6 +1,6 @@
 ---
 author: Ethan Webb
-date: "2022-01-18"
+date: "2022-01-17"
 description: Analysis Of COVID-19 Daily New Deaths Of Poland and Germany
 tags:
 - shortcodes
@@ -57,7 +57,7 @@ To build our models we rely on useful results such as Wold's Decomposition, whic
 
 With the stationary data, we then examine the Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) for each time series. From this initial analysis, we gain insight into the potential Autoregressive and Moving Average components of each series as well as if there is any seasonality. Firstly, we notice that both data sets have significant peaks at lags of multiples of 7, suggesting a seasonality with period 7. 
 
-Using $\mathrm{ARIMA}(p,d,q)$ models, we see no clear cut-offs in the ACFs and PACFs. However, for Polish data (Fig. 2), we observe significant peaks on the ACF and PACF that suggest the p values of $2,3 \text{ or } 4$ and q values of $1,2 \text{ or } 3$. Whereas for Germany (Fig. 3), p values of the range $2 \text{ to } 5$ and q is $1 \text{ or } 2$.
+Using \\(\mathrm{ARIMA}(p,d,q)\\) models, we see no clear cut-offs in the ACFs and PACFs. However, for Polish data (Fig. 2), we observe significant peaks on the ACF and PACF that suggest the p values of \\(2,3 \text{ or } 4\\) and q values of \\(1,2 \text{ or } 3\\). Whereas for Germany (Fig. 3), p values of the range \\(2 \text{ to } 5\\) and q is \\(1 \text{ or } 2\\).
 
 <figure>
 <img src="/acf_pacf.jpeg" style="width:100%">
@@ -75,12 +75,12 @@ Once we have stationary data, we try to find the best fit SARIMA models by using
 
 Before we begin building our models, we need to segment our data into training and test sets so we can assess the ability of our models to forecast the time series. Taking 10\% of the data leaves a forecast horizon of 31 days for the Polish data and 35 days for the German data.
 
-The modelling procedure is composed of five iterative steps: estimation of $\mathrm{ARIMA}$ parameters, diagnostic checking, estimation of $\mathrm{SARIMA}$ parameters, further diagnostic checking and finally prediction.
+The modelling procedure is composed of five iterative steps: estimation of \\(\mathrm{ARIMA}\\) parameters, diagnostic checking, estimation of \\(\mathrm{SARIMA}\\) parameters, further diagnostic checking and finally prediction.
 
-Since there is no clear cut off in either data's ACF and PACF, we start the process with an $\mathrm{ARIMA}(1,1,1)$ and iterate, changing the p and q values until the best model has been found. To check the models, we look at the p-value of the Ljung-Box statistic, which should be above the threshold of 0.05. This tests the randomness of our residuals. Then, by plotting the ACF and PACF of the residuals, we look for the resemblance of white noise. Lastly, we select the model based on information criterion, such as Akaike’s Information Criterion (AIC), which measures the degrees of freedom/numbers of free parameters. As a result, we aim to choose a suitable model with the least AIC score in order to avoid over-fitting.
+Since there is no clear cut off in either data's ACF and PACF, we start the process with an \\(\mathrm{ARIMA}(1,1,1)\\) and iterate, changing the p and q values until the best model has been found. To check the models, we look at the p-value of the Ljung-Box statistic, which should be above the threshold of 0.05. This tests the randomness of our residuals. Then, by plotting the ACF and PACF of the residuals, we look for the resemblance of white noise. Lastly, we select the model based on information criterion, such as Akaike’s Information Criterion (AIC), which measures the degrees of freedom/numbers of free parameters. As a result, we aim to choose a suitable model with the least AIC score in order to avoid over-fitting.
 
 
-The seasonality to our data means that we can improve our $\mathrm{ARIMA}$ models by adding MA and AR components for seasonality - forming a $\mathrm{SARIMA}$ model. Hence we repeat the process above, but for the seasonal component, until settling on the best models for each data set.
+The seasonality to our data means that we can improve our \\(\mathrm{ARIMA}\\) models by adding MA and AR components for seasonality - forming a \\(\mathrm{SARIMA}\\) model. Hence we repeat the process above, but for the seasonal component, until settling on the best models for each data set.
 
 Following this, we forecast our data (over the forecast horizon) using a fixed origin approach. We are then able to compare these forecasts to the real data to assess their ability. We finally use Error Matrix tests to measure the strength of, and error in, our predictions.   
 
@@ -95,11 +95,11 @@ Following this, we forecast our data (over the forecast horizon) using a fixed o
 
 #### ARIMA Selection
 
-Using R, we choose different permutations of parameters, starting from $\mathrm{ARIMA}(1,1,1)$, and select the best fitting models as described in the previous section. The scores for each test of the most appropriate models are displayed in the Table \ref{scores}. Based on that, we consider $\mathrm{ARIMA}(2,1,2)$ and $\mathrm{ARIMA}(3,1,4)$ for the SARIMA process.
+Using R, we choose different permutations of parameters, starting from \\(\mathrm{ARIMA}(1,1,1)\\), and select the best fitting models as described in the previous section. The scores for each test of the most appropriate models are displayed in the Table \ref{scores}. Based on that, we consider \\(\mathrm{ARIMA}(2,1,2)\\) and \\(\mathrm{ARIMA}(3,1,4)\\) for the SARIMA process.
 
 #### SARIMA Selection
 
-Building on $\mathrm{ARIMA}$, we repeat the process for the seasonal component and obtain two best performing models $\mathrm{SARIMA}(2,1,2, 0,1,2, s=7)$ and $\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)$. The ACF and PACF plots of their residuals (Fig. 4) are suitable for white noise, with a slightly better performance of the latter model.
+Building on \\(\mathrm{ARIMA}\\), we repeat the process for the seasonal component and obtain two best performing models \\(\mathrm{SARIMA}(2,1,2, 0,1,2, s=7)\\) and \\(\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)\\). The ACF and PACF plots of their residuals (Fig. 4) are suitable for white noise, with a slightly better performance of the latter model.
 
 <figure>
 <img src="/res1.jpeg" style="width:100%">
@@ -108,21 +108,21 @@ Building on $\mathrm{ARIMA}$, we repeat the process for the seasonal component a
 
 #### Model Selection
 
-For the final selection, we consider the complexity of the models – the first one is simpler than the second. For the Ljung-Box statistic - both pass the p-value threshold of 0.05 and residuals look like white noise. Finally, by comparing the AIC score, we choose $\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)$.
+For the final selection, we consider the complexity of the models – the first one is simpler than the second. For the Ljung-Box statistic - both pass the p-value threshold of 0.05 and residuals look like white noise. Finally, by comparing the AIC score, we choose \\(\mathrm{SARIMA}(3, 1, 4, 2, 1, 1, s = 7)\\).
 
 ### German Model
 
 #### ARIMA Selection
 
-Similarly, we use R to repeat this process for the German data. The best performing 3 models across the selection criteria were $\mathrm{ARIMA}(3,1,2)$, $\mathrm{ARIMA}(4,1,2)$ and $\mathrm{ARIMA}(5,1,2)$ (see Table \ref{scores}), which we iterate on for the seasonal component to find the best $\mathrm{SARIMA}$ model.
+Similarly, we use R to repeat this process for the German data. The best performing 3 models across the selection criteria were \\(\mathrm{ARIMA}(3,1,2)\\), \\(\mathrm{ARIMA}(4,1,2)\\) and \\(\mathrm{ARIMA}(5,1,2)\\) (see Table \ref{scores}), which we iterate on for the seasonal component to find the best \\(\mathrm{SARIMA}\\) model.
 
 #### SARIMA Selection
 
-Further iteration on the seasonal MA and AR parameters provides $\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)$ and $\mathrm{SARIMA}(5,1,2,1,0,1, s = 7)$ as the most appropriate models. 
+Further iteration on the seasonal MA and AR parameters provides \\(\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)\\) and \\(\mathrm{SARIMA}(5,1,2,1,0,1, s = 7)\\) as the most appropriate models. 
 
 #### Model Selection
 
-In order to select the leading $\mathrm{SARIMA}$ model we require residuals that resemble white noise, so we plot the two model's respective residual's ACF and PACF. Both of these are suitable. Since both models have p-values close to one across many lags for the Ljung-Box statistic, we choose the simpler model $\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)$ which has a lower AIC score.
+In order to select the leading \\(\mathrm{SARIMA}\\) model we require residuals that resemble white noise, so we plot the two model's respective residual's ACF and PACF. Both of these are suitable. Since both models have p-values close to one across many lags for the Ljung-Box statistic, we choose the simpler model \\(\mathrm{SARIMA}(3,1,2,1,0,1, s = 7)\\) which has a lower AIC score.
 
 
 <figure>
@@ -130,19 +130,106 @@ In order to select the leading $\mathrm{SARIMA}$ model we require residuals that
 <figcaption align = "center"><b>Figure 5 : ACF and PACF of residuals for both German models.</b></figcaption>
 </figure>
 
-
-
 ### Forecasting Models For Both Countries
 
+For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) leaving out 10\% of the last observations for both Polish and German data, take exponents of these forecasts to transform to new deaths and compare the performance against their respective models. Then, we evaluate our forecasts by differencing the realised observations with the estimates and calculate the mean absolute error (MAE) and the root mean square error (RMSE). For good forecasts, these scores will be minimised. The plots, Fig. 6, Fig. 7, are from a fixed forecast origin \\)n\\).
 
+<figure>
+<img src="/plpred1.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 6 : Forecast for Polish data.</b></figcaption>
+</figure>
+
+
+<figure>
+<img src="/gerpred2.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 7 : Forecast for German data.</b></figcaption>
+</figure>
+
+The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2, 1, 2, 0, 1, 2, s=7)\\) is:
+
+
+    \begin{align*}
+      & (1 - \phi_1B - \phi_2B^2)(1-B)(1-B^7)(x_{n+k}-\mu) = \\
+      &(1+\theta_1B + \theta_2B^2)(1+\Theta_1B^7 + \Theta_2B^{14})e_{n+k}
+    \end{align*}
+
+To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
+
+    \begin{equation*}
+       \begin{split}
+          \hat{x}_{n,k} &= \hat{x}_{n,k-1}(\phi_1 -1) + \hat{x}_{n,k-2}(\phi_2-\phi_1) - \phi_2\hat{x}_{n,k-3} + \\
+          &+ \hat{x}_{n,k-7} - \hat{x}_{n,k-8}(1+\phi_1) + \hat{x}_{n,k-9}(\phi_1 - \phi_2) + \\
+          &+ \phi_2 \hat{x}_{n,k-10}
+       \end{split}
+    \end{equation*}
+
+Similar can be written for other models.
+
+Starting from 9th Dec 2020 until 8th Jan 2021 for the Polish model prediction (red line), we can see that both \\(\mathrm{SARIMA}\\) models perform well overall. However, we observe a much better accuracy at the start of predictions, which get worse over time. The same happens to German data with forecasts from 5th Dec 2020 to 8th Jan 2021.
+
+The errors calculated in R, suggest that both Polish \\(\mathrm{SARIMA}\\) models perform similarly with small difference. In contrary, for Germany, the complex model is more accurate but as the difference is insignificant, we maintain that the simpler model is better to avoid overfitting.
 
 ## Discussion
 
+<figure>
+<img src="/news.jpeg" style="width:100%">
+<figcaption align = "center"><b>Figure 8 : Polish and German Data With Restirictions Added.</b></figcaption>
+</figure>
+
 ### Impact of Lockdowns and Restrictions
+
+Analysing the time series for both countries, we want to look at other factors that might be affecting daily new deaths such as governments’ actions to tackle the pandemic. 
+
+In Poland, the nation was put into a national lockdown and closed their borders relatively early. As a result, they were saved from the first wave and did not record any significant peaks at the start. In October, as the daily new deaths increased during that time, Poland was put into ‘red zone’, equivalent to tier 4 in the UK, before going into the second national lockdown on 28th December. For the last month, there is a decreasing trend of reported death cases.
+
+Unlike in Poland, we can see the first peak in COVID-19 daily deaths in Germany back in April. We can observe the lag of the death rate until the lockdown took effect and decreased the number of deaths. Looking at the death rate for the last few months, the country is still tackling with the mortality rate indicated by the increasing trend.
+
+Throughout summer and fall there was a growing number of anti-lockdown protests around both countries, with a greater severity in Poland. At the start of January, many businesses started reopening, rejecting their lockdown to survive. A map of ‘free businesses’ was created by the movement and some businesses have successfully overturned fines imposed by sanitary inspectors. Due to these circumstances, we might expect a higher death rate in the upcoming months in Poland.
 
 ### Improvements
 
+Reflecting on our work, we discuss our observations and how the analysis can be done differently.
+
+Firstly, we added a small non-zero value to our observations at the start so that we can take the log of the data in the case of no recorded deaths. Noting that as the value tends to zero, the log of it tends to infinity, we choose a reasonably small value of \\(\exp{(-3)}\\) that would not make a significant impact on stationarity.
+
+The ever changing nature of the pandemic means that modelling over the full data set reduces our ability to accurately predict forthcoming death figures. To improve accuracy, we could use a shorter period for our model building. This could be further advanced by producing a rolling forecast, replacing with a new training period for each model prediction - updating the data in real-time.
+
+
+The complexity of death cases during pandemic questions the effectiveness of our models. By using univariate time series, observations only depend on time, while there are multiple factors affecting mortality rate. Such examples include population: overall pre-existing medical conditions, demographic; social distancing measures or the number of medical staff and facilities per citizen. Furthermore, multivariate analysis would enable us to better relate the effect that neighboring countries, such as those in the EU Schengen Area, have on each other. 
+
+Therefore, we can consider multivariate time series models and involve more parameters. Based on a research article [7], we can use the Principal Component Analysis (PCA) to take into account other factors. In the paper, researchers combined the data from 56 countries on March 30, 82 countries on April 15, and 91 countries on April 25 2020 of total cases, total deaths, active cases, and critically ill cases into one single score, PC-1, and mortality recovery ratio, PC-2, at each time point. First, observations were converted to Z-scores, put into linear combinations, where each is a factor, and written as a correlation matrix. Then, using a clustering method grouped the countries accordingly to their score. A positive value of PC-1 indicates a high number of cases and deaths, whilst a positive PC-2 – a higher ratio of mortality to recovered cases. 
+
+One of the forecasting methods for multivariate time series is Vector Auto Regression [8], in which each variable is a linear function of the past values of itself and the past of other variables. For two time-dependent variables the equation is
+
+\[ \begin{bmatrix}
+            x_1(t) \\
+            x_2(t) \\
+            \end{bmatrix}
+            =
+            \begin{bmatrix}
+            a_1 \\
+            a_2 
+            \end{bmatrix}
+            +
+            \begin{bmatrix}
+            \phi_{11} & \phi_{12} \\
+            \phi_{21} & \phi_{22} 
+            \end{bmatrix}
+            \begin{bmatrix}
+            x_1(t-1) \\
+            x_2(t-2)
+            \end{bmatrix}
+            + 
+            \begin{bmatrix}
+             e_1(t) \\
+             e_2(t)
+            \end{bmatrix}\]\\
+            
+\\(a_1, a_2\\) - constant terms.
+
 ## Conclusion
+
+In conclusion, sadly, many lives have been lost and the consequences will be felt for many years. One way to help mitigate the impact of the pandemic is to understand the situation. Through time series analysis, we are able to find the best models to make predictions and to prepare for the repercussions. In our report, we analysed Polish and German daily death cases and built models to predict how these figures may evolve. These results can be used by decision makers to adjust restrictions and plan for the safe management of the rest of the pandemic. Whilst no models are perfect, some may be useful.
 
 ## References 
 

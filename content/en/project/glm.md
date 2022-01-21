@@ -1,6 +1,6 @@
 ---
 author: Ethan Webb
-date: "2022-01-18"
+date: "2022-01-15"
 description: An Analysis Of Smoking Cessation
 tags:
 - shortcodes
