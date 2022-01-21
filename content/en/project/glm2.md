@@ -90,7 +90,7 @@ __TABLE 1__
 The final fitted model for our data \\(\mathrm{Y_i}\\) follows a Negative-Binomial distribution: \\(Y_{i} \stackrel{\text { indep }}{\sim} \operatorname{Negative-Binomial}\left(\mu_i, \alpha = 42.0  \right)\\). Where the mean component is given by:
 
 $$
-\mu_i = \exp(log(\mathrm{O}_i) + \beta_1+\beta_2 \cdot \mathrm{1}_{\text{S=male}}+\beta_3 \cdot  \mathrm{1}_{\text{A=yearling}}+\beta_4 \cdot \mathrm{1}_{\text{R=0.25}}+\beta_5 \cdot \mathrm{1}_{\text{R=0.5}}+ \beta_6 \cdot Z_i +\beta_7 \cdot B_i+\beta_8 \cdot U_i+ \beta_9 \cdot A_i \cdot Z_i)
+\mu_{i}=\exp \left(\log \left(\mathrm{O}_{i}\right)+\beta_{1}+\beta_{2} \cdot 1_{\mathrm{S}=\text { male }}+\beta_{3} \cdot 1_{\mathrm{A}=\text { yearling }}+\beta_{4} \cdot 1_{\mathrm{R}=0.25}+\beta_{5} \cdot 1_{\mathrm{R}=0.5}+\beta_{6} \cdot Z_{i}+\beta_{7} \cdot B_{i}+\beta_{8} \cdot U_{i}+\beta_{9} \cdot A_{i} \cdot Z_{i}\right)
 $$
 
 and the coefficients are (to 3.s.f) as follows:  \\(\beta_1= -0.157\\), \\(\beta_2 = 0.177\\), \\(\beta_3=-1.21\\), \\(\beta_4=0.440\\), \\(\beta_5=0.378\\), \\(\beta_6=0.0184\\), \\(\beta_7=0.267\\), \\(\beta_8=-0.0690\\), \\(\beta_9 = 0.0744\\). 
