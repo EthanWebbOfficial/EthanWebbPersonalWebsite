@@ -134,7 +134,7 @@ In order to select the leading \\(\mathrm{SARIMA}\\) model we require residuals 
 
 ### Forecasting Models For Both Countries
 
-For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) leaving out 10\% of the last observations for both Polish and German data, take exponents of these forecasts to transform to new deaths and compare the performance against their respective models. Then, we evaluate our forecasts by differencing the realised observations with the estimates and calculate the mean absolute error (MAE) and the root mean square error (RMSE). For good forecasts, these scores will be minimised. The plots, Fig. 6, Fig. 7, are from a fixed forecast origin \\)n\\).
+For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) leaving out 10\% of the last observations for both Polish and German data, take exponents of these forecasts to transform to new deaths and compare the performance against their respective models. Then, we evaluate our forecasts by differencing the realised observations with the estimates and calculate the mean absolute error (MAE) and the root mean square error (RMSE). For good forecasts, these scores will be minimised. The plots, Fig. 6, Fig. 7, are from a fixed forecast origin \\(n\\).
 
 <figure>
 <img src="/plpred1.jpeg" style="width:100%">
@@ -149,21 +149,22 @@ For the SARIMA models we built, we estimate future values \\(x_{n+k}\\) for \\(k
 
 The forecast of future values \\(x_{n+k}\\) for \\(k=1,2,3...\\) for \\(SARIMA(2, 1, 2, 0, 1, 2, s=7)\\) is:
 
-
-    $$\begin{align*}
-      & (1 - \phi_1B - \phi_2B^2)(1-B)(1-B^7)(x_{n+k}-\mu) = \\
-      &(1+\theta_1B + \theta_2B^2)(1+\Theta_1B^7 + \Theta_2B^{14})e_{n+k}
-    \end{align*}$$
+$$
+\begin{aligned}
+&\left(1-\phi_{1} B-\phi_{2} B^{2}\right)(1-B)\left(1-B^{7}\right)\left(x_{n+k}-\mu\right)= \\
+&\left(1+\theta_{1} B+\theta_{2} B^{2}\right)\left(1+\Theta_{1} B^{7}+\Theta_{2} B^{14}\right) e_{n+k}
+\end{aligned}
+$$
 
 To derive an expression for the expected forecasts, we set \\(e_{n+1}= e_{n+2}= ...=0\\) and for simplicity \\(\mu = 0\\). Expanding the left hand side, we obtain
 
-    $$\begin{equation*}
-       \begin{split}
-          \hat{x}_{n,k} &= \hat{x}_{n,k-1}(\phi_1 -1) + \hat{x}_{n,k-2}(\phi_2-\phi_1) - \phi_2\hat{x}_{n,k-3} + \\
-          &+ \hat{x}_{n,k-7} - \hat{x}_{n,k-8}(1+\phi_1) + \hat{x}_{n,k-9}(\phi_1 - \phi_2) + \\
-          &+ \phi_2 \hat{x}_{n,k-10}
-       \end{split}
-    \end{equation*}$$
+$$
+\begin{aligned}
+\hat{x}_{n, k} &=\hat{x}_{n, k-1}\left(\phi_{1}-1\right)+\hat{x}_{n, k-2}\left(\phi_{2}-\phi_{1}\right)-\phi_{2} \hat{x}_{n, k-3}+\\
+&+\hat{x}_{n, k-7}-\hat{x}_{n, k-8}\left(1+\phi_{1}\right)+\hat{x}_{n, k-9}\left(\phi_{1}-\phi_{2}\right)+\\
+&+\phi_{2} \hat{x}_{n, k-10}
+\end{aligned}
+$$
 
 Similar can be written for other models.
 
@@ -203,29 +204,24 @@ Therefore, we can consider multivariate time series models and involve more para
 
 One of the forecasting methods for multivariate time series is Vector Auto Regression [8], in which each variable is a linear function of the past values of itself and the past of other variables. For two time-dependent variables the equation is
 
-$$\begin{bmatrix}
-            x_1(t) \\
-            x_2(t) \\
-            \end{bmatrix}
-            =
-            \begin{bmatrix}
-            a_1 \\
-            a_2 
-            \end{bmatrix}
-            +
-            \begin{bmatrix}
-            \phi_{11} & \phi_{12} \\
-            \phi_{21} & \phi_{22} 
-            \end{bmatrix}
-            \begin{bmatrix}
-            x_1(t-1) \\
-            x_2(t-2)
-            \end{bmatrix}
-            + 
-            \begin{bmatrix}
-             e_1(t) \\
-             e_2(t)
-            \end{bmatrix}$$
+$$
+\left[\begin{array}{l}
+x_{1}(t) \\
+x_{2}(t)
+\end{array}\right]=\left[\begin{array}{l}
+a_{1} \\
+a_{2}
+\end{array}\right]+\left[\begin{array}{ll}
+\phi_{11} & \phi_{12} \\
+\phi_{21} & \phi_{22}
+\end{array}\right]\left[\begin{array}{l}
+x_{1}(t-1) \\
+x_{2}(t-2)
+\end{array}\right]+\left[\begin{array}{l}
+e_{1}(t) \\
+e_{2}(t)
+\end{array}\right]
+$$
             
 \\(a_1, a_2\\) - constant terms.
 
