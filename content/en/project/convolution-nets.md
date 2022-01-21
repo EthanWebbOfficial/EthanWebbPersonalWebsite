@@ -21,4 +21,12 @@ title: Convolutional Neural Networks
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
 
+{{< math.inline >}}
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+{{</ math.inline >}}
+
 **Context:** Part of my Statistical Learning Module, I was placed in a group of 4 challenged with writing a report (and delivering a presentation at a class conference) based on Convolution Neural Networks. Prior to this assignment I had not gained much exposure to CNNs and enjoyed the process of learning something new from first principles. Our report covered a mathematical outline of convolution, the components of a Convolution Layer and the structure of a CNN. I was delighted to receive the <mark>Best Presentation Award</mark>, chosen by industry representatives from SkyBet Gaming out of the 28 groups that participated in the class conference. Our report is still being graded and will be added below in due course.
+
+# Convolutional Neural Networks and Their Application Within Image Classification
