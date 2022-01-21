@@ -2,12 +2,9 @@
 author: Ethan Webb
 date: "2022-01-17"
 description: Analysis Of COVID-19 Daily New Deaths Of Poland and Germany
-tags:
-- shortcodes
-- privacy
+math: true
 thumbnail: /covid-19.jpg
 title: Covid-19 Time Series Analysis
-math: true
 ---
 
 <!-- START Keep For Maths -->
@@ -21,6 +18,12 @@ math: true
 {{ end }}
 {{</ math.inline >}}
 <!-- END Keep For Maths -->
+
+{{< math.inline >}}
+<p>
+Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
+</p>
+{{</ math.inline >}}
 
 **Context:** As part of my Time Series module, I worked in a group of 3 to use the skills learned during the course to produce a report and deliver a presentation on a data set relating to the Covid-19 pandemic. We chose to compare the daily new deaths of Germany and Poland since they share a boarder and had contrasting governance approaches to the pandemic. <mark>We scored 90\% on this project.</mark> I was very proud of this because the project was supposed to be done in groups of 4, however I was assigned to a group of 3 - with 2 people that spoke English as their second language. I learnt some great communication skills as a result. 
 
