@@ -55,3 +55,26 @@ Block math:
 $$
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
 $$
+
+Test 3:
+
+$$
+\left[\begin{array}{l}
+x_{1}(t) \\
+x_{2}(t)
+\end{array}\right]=\left[\begin{array}{l}
+a_{1} \\
+a_{2}
+\end{array}\right]+\left[\begin{array}{ll}
+\phi_{11} & \phi_{12} \\
+\phi_{21} & \phi_{22}
+\end{array}\right]\left[\begin{array}{l}
+x_{1}(t-1) \\
+x_{2}(t-2)
+\end{array}\right]+\left[\begin{array}{l}
+e_{1}(t) \\
+e_{2}(t)
+\end{array}\right]
+$$
+
+In this report we analysed Polish and German daily new deaths, recorded from March, 2020 to January, 2021, by considering \\(\mathbf{SARIMA}\\) models using an iterative Box-Jenkins approach. We conclude that for Polish data the best fitting model is \\(\mathbf{SARIMA(3, 1, 4, 2, 1, 1, s = 7)}\\), whilst for Germany \\(\mathbf{SARIMA(3, 1, 2, 1, 0, 1, s = 7)}\\). Our forecasting results suggest good performance across the models, validating their effectiveness. We discussed other important factors such as governments' response and also the limitations of our work. Finally, we explored ideas on how we could improve our analysis.
