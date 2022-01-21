@@ -1,6 +1,7 @@
 ---
 author: Ethan Webb
 date: "2022-01-16"
+math: true
 description: Modelling The Number Of Feeds For Bird Chicks
 thumbnail: /bird-feed.png
 title: Bird Chick Feeding - Generalised Linear Models

@@ -3,6 +3,7 @@ author: Ethan Webb
 date: "2022-01-15"
 description: An Analysis Of Smoking Cessation
 thumbnail: /smoking.png
+math: true
 title: Smoking - Generalised Linear Models
 ---
 
