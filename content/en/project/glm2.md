@@ -70,14 +70,14 @@ We then repeat the deviance test with our new model. We get a model deviance of 
 
 __TABLE 1__
 
-| \hline Run | Iteration 1                                              | p-value (3.s.f)        | Iteration 2                                               | p-value (3.s.f)       | Iteration 3                                               | p-value (3.s.f) |
+|   Run | Iteration 1                                              | p-value (3.s.f)        | Iteration 2                                               | p-value (3.s.f)       | Iteration 3                                               | p-value (3.s.f) |
 |:----------:|:--------------------------------------------------------:|:----------------------:|:---------------------------------------------------------:|:---------------------:|:---------------------------------------------------------:|:---------------:|
-| \hline P1  | \\(\mathrm{A}_{\mathrm{i}} 	\times \mathrm{Z}_{\mathrm{i}}\\)  | \\(8.37 \times 10^{-16}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(4.15 \times 10^{-8}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.00995\\)       |
-| \hline P2  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(3.24 \times 10^{-17}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(8.25 \times 10^{-4}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0118\\)        |
-| \hline P3  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(6.5 \times 10^{-17}\\)  | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0174\\)              |                                                           |                 |
-| \hline NB1 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(10^{-8}\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(3.37 \times 10^{-5}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0277\\)        |
-| \hline NB2 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(5.56 \times 10^{-10}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(0.00505\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0354\\)        |
-| \hline NB3 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(2.15 \times 10^{-10}\\) |                                                           |                       |                                                           |                 |
+|   P1  | \\(\mathrm{A}_{\mathrm{i}} 	\times \mathrm{Z}_{\mathrm{i}}\\)  | \\(8.37 \times 10^{-16}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(4.15 \times 10^{-8}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.00995\\)       |
+|   P2  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(3.24 \times 10^{-17}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(8.25 \times 10^{-4}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0118\\)        |
+|   P3  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(6.5 \times 10^{-17}\\)  | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0174\\)              |                                                           |                 |
+|   NB1 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(10^{-8}\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(3.37 \times 10^{-5}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0277\\)        |
+|   NB2 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(5.56 \times 10^{-10}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(0.00505\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0354\\)        |
+|   NB3 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(2.15 \times 10^{-10}\\) |                                                           |                       |                                                           |                 |
 
 
 <figure>
