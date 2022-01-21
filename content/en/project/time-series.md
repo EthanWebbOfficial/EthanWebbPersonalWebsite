@@ -206,7 +206,7 @@ Therefore, we can consider multivariate time series models and involve more para
 One of the forecasting methods for multivariate time series is Vector Auto Regression [8], in which each variable is a linear function of the past values of itself and the past of other variables. For two time-dependent variables the equation is
 
 
-\\( \\( \left[\begin{array}{l}
+\\\\( \left[\begin{array}{l}
 x_{1}(t) \\
 x_{2}(t)
 \end{array}\right]=\left[\begin{array}{l}
@@ -221,7 +221,7 @@ x_{2}(t-2)
 \end{array}\right]+\left[\begin{array}{l}
 e_{1}(t) \\
 e_{2}(t)
-\end{array}\right] \\) \\)
+\end{array}\right] \\\\)
 
             
 \\(a_1, a_2\\) - constant terms.
