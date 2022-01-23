@@ -68,17 +68,11 @@ To begin testing the appropriateness of this model, we conduct a model deviance 
 We then repeat the deviance test with our new model. We get a model deviance of 100
  (3.s.f) which is less than the critical value at the 5\% significant level - 108 (3.s.f). Therefore, our new model is a much better fit than its previous Poisson counterpart. This is further reinforced by a plot of the residuals against the fitted model (Figure 1), which shows no clear pattern and implies a good model fit.
 
-__TABLE 1__
 
-|   Run | Iteration 1                                              | p-value (3.s.f)        | Iteration 2                                               | p-value (3.s.f)       | Iteration 3                                               | p-value (3.s.f) |
-|:----------:|:--------------------------------------------------------:|:----------------------:|:---------------------------------------------------------:|:---------------------:|:---------------------------------------------------------:|:---------------:|
-|   P1  | \\(\mathrm{A}_{\mathrm{i}} 	\times \mathrm{Z}_{\mathrm{i}}\\)  | \\(8.37 \times 10^{-16}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(4.15 \times 10^{-8}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.00995\\)       |
-|   P2  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(3.24 \times 10^{-17}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(8.25 \times 10^{-4}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0118\\)        |
-|   P3  | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(6.5 \times 10^{-17}\\)  | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0174\\)              |                                                           |                 |
-|   NB1 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(10^{-8}\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(3.37 \times 10^{-5}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0277\\)        |
-|   NB2 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(5.56 \times 10^{-10}\\) | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{R}_{\mathrm{i}}\\) | \\(0.00505\\)             | \\(\mathrm{~A}_{\mathrm{i}} \times \mathrm{B}_{\mathrm{i}}\\) | \\(0.0354\\)        |
-|   NB3 | \\(\mathrm{A}_{\mathrm{i}} \times \mathrm{Z}_{\mathrm{i}}\\) | \\(2.15 \times 10^{-10}\\) |                                                           |                       |                                                           |                 |
-
+<figure>
+<img src="/bird_table.png" style="width:100%">
+<figcaption align = "center"><b>Table 1</b></figcaption>
+</figure>
 
 <figure>
 <img src="/residuals_for_birds.png" style="width:100%">
@@ -89,9 +83,10 @@ __TABLE 1__
 
 The final fitted model for our data \\(\mathrm{Y_i}\\) follows a Negative-Binomial distribution: \\(Y_{i} \stackrel{\text { indep }}{\sim} \operatorname{Negative-Binomial}\left(\mu_i, \alpha = 42.0  \right)\\). Where the mean component is given by:
 
-\\(
-\mu_{i}=\exp \left(\log \left(\mathrm{O}_{i}\right)+\beta_{1}+\beta_{2} \cdot 1_{\mathrm{S}=\text { male }}+\beta_{3} \cdot 1_{\mathrm{A}=\text { yearling }}+\beta_{4} \cdot 1_{\mathrm{R}=0.25}+\beta_{5} \cdot 1_{\mathrm{R}=0.5}+\beta_{6} \cdot Z_{i}+\beta_{7} \cdot B_{i}+\beta_{8} \cdot U_{i}+\beta_{9} \cdot A_{i} \cdot Z_{i}\right)
-\\)
+<figure>
+<img src="/bird_equation.png" style="width:100%">
+<figcaption align = "center"><b>Mean Component</b></figcaption>
+</figure>
 
 and the coefficients are (to 3.s.f) as follows:  \\(\beta_1= -0.157\\), \\(\beta_2 = 0.177\\), \\(\beta_3=-1.21\\), \\(\beta_4=0.440\\), \\(\beta_5=0.378\\), \\(\beta_6=0.0184\\), \\(\beta_7=0.267\\), \\(\beta_8=-0.0690\\), \\(\beta_9 = 0.0744\\). 
 
