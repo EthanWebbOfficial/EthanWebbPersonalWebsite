@@ -31,7 +31,7 @@ Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 
 ## Abstract
 
-The anti-smoking movement has created a cultural shift in recent decades, resulting in a rise of health concerns and relevant statistical analysis. We aim to answer the question of which path to smoking cessation based on lifestyle choices is the most successful. Throughout this report we have analysed data consisting of 4 categorical variables, and discovered that ``years smoked'' and ``methods'' are the most impactful in relation to smoking cessation. Furthermore, the best method out of the five options is individual therapy; the only one with a significant confidence interval at the 5\% significance level. Amongst the numerous conclusions that are drawn from this report, the most significant was that an individual is more likely to quit smoking, the shorter the amount of time they've been smoking for, with individuals being 6.45 times more likely to restart smoking if they've been smoking for 10 years compared to someone whose only been smoking for 4 years. We conclude by outlining which group of people are most at risk of restarting.
+The anti-smoking movement has created a cultural shift in recent decades, resulting in a rise of health concerns and relevant statistical analysis. We aim to answer the question of which path to smoking cessation based on lifestyle choices is the most successful. Throughout this report we have analysed data consisting of 4 categorical variables, and discovered that "years smoked" and "methods" are the most impactful in relation to smoking cessation. Furthermore, the best method out of the five options is individual therapy; the only one with a significant confidence interval at the 5\% significance level. Amongst the numerous conclusions that are drawn from this report, the most significant was that an individual is more likely to quit smoking, the shorter the amount of time they've been smoking for, with individuals being 6.45 times more likely to restart smoking if they've been smoking for 10 years compared to someone whose only been smoking for 4 years. We conclude by outlining which group of people are most at risk of restarting.
 
 
 ## Introduction 
@@ -55,7 +55,7 @@ In this report we model the data and perform various tests in order to determine
 
 ### Preliminary Analysis 
 
-We begin our analysis by exploring the ``Smoking'' dataset. We first use \texttt{R} to produce a series of simple numerical summaries and graphical images in order to assess the key features of the distribution of the data. This enables us to visualise the local concentration, dispersion, shape of the data  and variable relationships. 
+We begin our analysis by exploring the "Smoking" dataset. We first use R to produce a series of simple numerical summaries and graphical images in order to assess the key features of the distribution of the data. This enables us to visualise the local concentration, dispersion, shape of the data  and variable relationships. 
 
 Before fitting our models, it is important to examine the relationship between the dependent and explanatory variables to gain insight into which explanatory variables are likely to be important in describing the variability in the responses. Similarly, we investigate how the explanatory variables relate to one-another to identify any potential collinearity. Since all of our explanatory variables are provided in categorical form, we use the Chi-Squared Test to assess the dependence. For a significant result, we would expect to see a Chi-Squared Statistic greater than the Critical Value for the respective degrees of freedom at a 5\% significance level. Our 4 categorical explanatory variables have the following levels: \\(\mathrm{YS}=3\\) (short-term/medium-term/long-term), \\(\mathrm{PD}=3\\) (low/medium/high), \\(\mathrm{O}=2\\) (Yes/No), \\(\mathrm{M}=5\\) (see introduction).  
 
@@ -65,7 +65,7 @@ In the event where there is an association between our categorical variables, a 
 
 Now that we have an intrinsic understanding of our variables, we begin fitting a model for the Smoking data.
 
-Our data comprises of 4 explanatory variables and a response variable; the latter being whether someone restarts smoking. As the response has binary outcomes, ``yes'' and ``no'', and we have \\(n\\) independent and identically distributed trials, we use the Binomial family to model our variable.
+Our data comprises of 4 explanatory variables and a response variable; the latter being whether someone restarts smoking. As the response has binary outcomes, "yes" and "no", and we have \\(n\\) independent and identically distributed trials, we use the Binomial family to model our variable.
 
 The existence of 4 explanatory variables, results in there being \\(2^4=16\\) potential models to choose from to represent our data. Processing and analysing each model separately is clearly impractical so we use forward selection to determine the most appropriate.
 
@@ -84,9 +84,11 @@ After our process of forward selection we are able to move on to model testing.
 
 To ensure that our model is indeed a good one for our data, we construct a 95\% confidence interval for each of the coefficients to assess the significant components of the model:
 
-$$
-\left(\hat{\beta}_{k}-z_{1-\frac{\alpha}{2}} \times std\left(\hat{\beta}_{k}\right), \quad \hat{\beta}_{k}+z_{1-\frac{\alpha}{2}} \times std\left(\hat{\beta}_{k}\right)\right)
-$$
+<figure>
+<img src="/smoke_com_1.png" style="width:100%">
+<figcaption align = "center"><b></b></figcaption>
+</figure>
+
 
 If this interval does not contain 0, then the given explanatory variable is a significant component in the model at the 5\% significance level. 
 
@@ -181,10 +183,11 @@ $$
 \mathrm{logit}\left( \mu_i \right) = \beta_0 + \beta_1 \mathrm{YS}_i + \beta_2 \mathrm{A}_i
 $$
 
-$$\text{ Where } \quad \mathrm{A}_i =\left\{\begin{array}{ll}
-1, & \text { if  individual therapy } \\
-0, & \text { otherwise }
-\end{array}\right.$$
+<figure>
+<img src="/smoke_com_2.png" style="width:100%">
+<figcaption align = "center"><b></b></figcaption>
+</figure>
+
 
 The significance test for the final model produced Table 8:
 
@@ -205,7 +208,7 @@ The deviance of the model is \\(334.84\\) with \\(347\\) degrees of freedom, whi
 
 We then plot the residuals on a histogram as seen below (Figure 2). We can see that this histogram is roughly normally distributed with a mean about zero which suggests that overall our model is good at predicting the likelihood of a smoker restarting given the number of years they have smoked and whether they have undergone individual therapy. 
 
-From the Q-Q plot (Figure 2) we see that there is a ``banding structure'' around \\((0.3,-0.1)\\) which we expect to see due to the use of the logistic regression function. Despite this banding structure we can see that the data roughly lies on the line \\(\mathrm{y}=\mathrm{x}\\) giving us confidence that our model is a good descriptor of the data.
+From the Q-Q plot (Figure 2) we see that there is a "banding structure" around \\((0.3,-0.1)\\) which we expect to see due to the use of the logistic regression function. Despite this banding structure we can see that the data roughly lies on the line \\(\mathrm{y}=\mathrm{x}\\) giving us confidence that our model is a good descriptor of the data.
 
 <figure>
 <img src="/1.png" style="width:100%">
@@ -245,7 +248,7 @@ Despite the numerous resources offered to aid giving up smoking, we realise from
 
 No statistical model is without limitations. By grouping all but the individual method, into one level of the categorical variable, we have produced a more parsimonious model. However, this limits our ability to make inference, specifically about these methods on their own. Our data only considers 4 explanatory variables in smoking cessation and it is possible that there are more important variables it doesn't consider. We have no information regarding the length of restart follow-up period, and hence our inference on the best methods to prevent restarting could be time sensitive (i.e. non-restart patients still return to smoking.)  Another aspect to the limitations of our work is that the data hasn’t been collected from a true clinical trial and so cannot be confidently compared with previous studies and may not correlate with preceding expectations. This could cause it to be difficult to associate with real-world applications.
 
-A potential pathway into future analysis that may improve our work could be to gather a true data set. To improve our study, we may look into other potential variables that contribute to success in smoking cessation such as age, whether the participants parents were smokers, and gender. Gender differences would be interesting to investigate as, ``women may be at relatively greater risk of smoking-related diseases than men and tend to have less success than men in quitting smoking'' [4]. Links have also been made between smoking and depression: ``smokers with major depression [are] less successful at their attempts to quit'' than other groups in the trial who don’t suffer from major depression [5]. Since “the lifetime prevalence of a major depressive disorder in women (\\(21.3\%\\)) is almost twice that in men (\\(12.7\%\\))”, [6], it would be fascinating to explore any interactions between a depressive disorder and a variable we have already analysed such as number of years smoked, across differing genders. We could further discuss the link between depression and how successful these individuals are at quitting smoking considering the apparent statistical odds stacked against them.
+A potential pathway into future analysis that may improve our work could be to gather a true data set. To improve our study, we may look into other potential variables that contribute to success in smoking cessation such as age, whether the participants parents were smokers, and gender. Gender differences would be interesting to investigate as, "women may be at relatively greater risk of smoking-related diseases than men and tend to have less success than men in quitting smoking" [4]. Links have also been made between smoking and depression: "smokers with major depression [are] less successful at their attempts to quit" than other groups in the trial who don’t suffer from major depression [5]. Since “the lifetime prevalence of a major depressive disorder in women (\\(21.3\%\\)) is almost twice that in men (\\(12.7\%\\))”, [6], it would be fascinating to explore any interactions between a depressive disorder and a variable we have already analysed such as number of years smoked, across differing genders. We could further discuss the link between depression and how successful these individuals are at quitting smoking considering the apparent statistical odds stacked against them.
 
 We address that no model is perfect, and the ability to determine precisely the most successful pathways to smoking cessation can only ever be achieved to a certain extent. However, it remains an area of considerable scientific intrigue from both a social and health beneficial point of view.
 
